@@ -1,0 +1,140 @@
+{
+  "G:\\Python\\github\\amazon_keyword_analyzer\\20260603_215741_DE__20260603_215435.csv": {
+    "signature": {
+      "size": 30176849,
+      "mtime": 1781408621.5913928
+    },
+    "processed_at": "2026-06-14T11:46:20",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\20260603_215741_DE__20260603_215435_processed.csv",
+    "total_rows": 120812,
+    "kept_rows": 110940,
+    "removed_rows": 9872,
+    "removed_stopword_rows": 9872,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\20260603.csv": {
+    "signature": {
+      "size": 29447400,
+      "mtime": 1781409089.4912975
+    },
+    "processed_at": "2026-06-14T11:52:56",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\20260603_processed.csv",
+    "total_rows": 120812,
+    "kept_rows": 110940,
+    "removed_rows": 9872,
+    "removed_stopword_rows": 9872,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2026_06_03.csv": {
+    "signature": {
+      "size": 29447400,
+      "mtime": 1781409089.4912975
+    },
+    "processed_at": "2026-06-14T13:16:26",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2026_06_03_processed.csv",
+    "total_rows": 120812,
+    "kept_rows": 88111,
+    "removed_rows": 32701,
+    "removed_category_rows": 24026,
+    "removed_stopword_rows": 8675,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2026_05_30.csv": {
+    "signature": {
+      "size": 56919109,
+      "mtime": 1781415896.8624153
+    },
+    "processed_at": "2026-06-14T13:51:09",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2026_05_30_processed.csv",
+    "total_rows": 100716,
+    "kept_rows": 73023,
+    "removed_rows": 27693,
+    "removed_category_rows": 20570,
+    "removed_stopword_rows": 7123,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2025_04_05.csv": {
+    "signature": {
+      "size": 57159481,
+      "mtime": 1781414120.0
+    },
+    "processed_at": "2026-06-14T13:20:29",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2025_04_05_processed.csv",
+    "total_rows": 105405,
+    "kept_rows": 75345,
+    "removed_rows": 30060,
+    "removed_category_rows": 21251,
+    "removed_stopword_rows": 8809,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2026_05_23.csv": {
+    "signature": {
+      "size": 57899451,
+      "mtime": 1781414016.0
+    },
+    "processed_at": "2026-06-14T13:20:35",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2026_05_23_processed.csv",
+    "total_rows": 102916,
+    "kept_rows": 74065,
+    "removed_rows": 28851,
+    "removed_category_rows": 21459,
+    "removed_stopword_rows": 7392,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2025_04_12.csv": {
+    "signature": {
+      "size": 57264993,
+      "mtime": 1781416184.6286783
+    },
+    "processed_at": "2026-06-14T13:50:26",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2025_04_12_processed.csv",
+    "total_rows": 105405,
+    "kept_rows": 75345,
+    "removed_rows": 30060,
+    "removed_category_rows": 21251,
+    "removed_stopword_rows": 8809,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2026_05_02.csv": {
+    "signature": {
+      "size": 57796690,
+      "mtime": 1781416112.8918192
+    },
+    "processed_at": "2026-06-14T13:50:32",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2026_05_02_processed.csv",
+    "total_rows": 102916,
+    "kept_rows": 74065,
+    "removed_rows": 28851,
+    "removed_category_rows": 21459,
+    "removed_stopword_rows": 7392,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2026_05_09.csv": {
+    "signature": {
+      "size": 56818685,
+      "mtime": 1781415997.0266557
+    },
+    "processed_at": "2026-06-14T13:50:37",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2026_05_09_processed.csv",
+    "total_rows": 100716,
+    "kept_rows": 73023,
+    "removed_rows": 27693,
+    "removed_category_rows": 20570,
+    "removed_stopword_rows": 7123,
+    "removed_empty_rows": 0
+  },
+  "G:\\Python\\github\\amazon_keyword_analyzer\\raw_data\\DE_热门搜索词_简单_Week_2026_05_16.csv": {
+    "signature": {
+      "size": 29447344,
+      "mtime": 1781416024.6090357
+    },
+    "processed_at": "2026-06-14T13:51:03",
+    "output": "G:\\Python\\github\\amazon_keyword_analyzer\\processed_data\\DE_热门搜索词_简单_Week_2026_05_16_processed.csv",
+    "total_rows": 120812,
+    "kept_rows": 88111,
+    "removed_rows": 32701,
+    "removed_category_rows": 24026,
+    "removed_stopword_rows": 8675,
+    "removed_empty_rows": 0
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>亚马逊ABA关键词趋势分析 | 德国站</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <div class="logo-text">Amazon Brand Analytics</div>
+                <div class="logo-badge">德国站 · 热门搜索词</div>
+            </div>
+            <div class="update-info">
+                📅 数据周期: 2026年第22周 | 最后更新: 2026-06-14
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="year-tabs" id="yearTabs">
+            <button class="year-btn" data-year="2024">📅 2024年</button>
+            <button class="year-btn" data-year="2025">📅 2025年</button>
+            <button class="year-btn active" data-year="2026">📅 2026年</button>
+            <button class="year-btn" data-year="compare">📊 三年对比</button>
+        </div>
+
+        <div class="category-section">
+            <div class="section-header">
+                <span class="section-icon">🏷️</span>
+                <span class="section-title">产品分类筛选</span>
+                <span class="section-hint">点击筛选对应类目关键词</span>
+            </div>
+            <div class="category-buttons" id="categoryButtons">
+                <button class="cat-btn active" data-cat="all">📌 全部</button>
+                <button class="cat-btn" data-cat="clothing">👕 服装服饰</button>
+                <button class="cat-btn" data-cat="electronics">📱 电子产品</button>
+                <button class="cat-btn" data-cat="home">🏠 家居用品</button>
+                <button class="cat-btn" data-cat="sports">🏃 运动户外</button>
+                <button class="cat-btn" data-cat="toys">🎮 玩具游戏</button>
+                <button class="cat-btn" data-cat="books">📚 图书音像</button>
+                <button class="cat-btn" data-cat="other">📌 其他</button>
+            </div>
+        </div>
+
+        <div class="kpi-grid" id="kpiGrid">
+            <div class="kpi-card"><div class="kpi-icon">🎯</div><div class="kpi-label">当前排名</div><div class="kpi-value" id="currentRank">--</div><div class="kpi-trend" id="rankTrend">--</div></div>
+            <div class="kpi-card"><div class="kpi-icon">📊</div><div class="kpi-label">平均排名</div><div class="kpi-value" id="avgRank">--</div><div class="kpi-trend">52周平均值</div></div>
+            <div class="kpi-card"><div class="kpi-icon">📈</div><div class="kpi-label">最佳排名</div><div class="kpi-value" id="bestRank">--</div><div class="kpi-trend">年度最佳表现</div></div>
+            <div class="kpi-card"><div class="kpi-icon">🏆</div><div class="kpi-label">关键词总数</div><div class="kpi-value" id="totalKeywords">--</div><div class="kpi-trend">有效关键词</div></div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-header">
+                <div class="chart-title-wrapper"><div class="chart-icon">📈</div><div class="chart-title" id="chartTitle">关键词排名趋势 - 2026年</div></div>
+                <div class="chart-controls"><button class="chart-btn" id="zoomInBtn">🔍 放大</button><button class="chart-btn" id="zoomOutBtn">🔍 缩小</button><button class="chart-btn" id="resetZoomBtn">⟳ 重置</button></div>
+            </div>
+            <div class="chart-note">📌 数值越小 = 排名越靠前 | 鼠标拖拽可缩放查看细节</div>
+            <div id="trendChart" class="chart-box"></div>
+        </div>
+
+        <div class="table-container">
+            <div class="table-header"><div class="rank-col">排名</div><div class="keyword-col">关键词</div><div class="trend-col text-right">周环比</div><div class="category-col text-right">分类</div><div class="brand-col text-right">Top品牌</div></div>
+            <div id="tableBody"><div class="loading">加载数据中...</div></div>
+        </div>
+
+        <div class="footer"><p>数据来源：亚马逊品牌分析 | 德国站热门搜索词报告</p><p>数据文件: 20260603_215741_DE__20260603_215435.csv | 基于真实TOP50关键词 + 模拟历史趋势</p></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

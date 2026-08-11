@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>热搜词选品 Demo</title>
+  <link rel="stylesheet" href="./src/style.css?v=20260614-24" />
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">K</div>
+      <div class="brand-copy">
+        <div class="brand-name"><span class="brand-main">火龙果</span><span class="brand-tail">关键词选品</span></div>
+        <div class="brand-subtitle">为中小卖家找到适合的市场;小卖家的福音</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <button class="active nav-tab nav-hot" data-view="hot" data-rank="all">热搜词选品</button>
+      <button class="nav-tab nav-tier tier-1" data-view="hot" data-rank="1_50000">1-5W词选品</button>
+      <button class="nav-tab nav-tier tier-2" data-view="hot" data-rank="50001_100000">5-10W选品</button>
+      <button class="nav-tab nav-tier tier-3" data-view="hot" data-rank="100001_200000">10-20W选品</button>
+      <button class="nav-tab nav-tier tier-4" data-view="hot" data-rank="gte_200001">20W+选品</button>
+      <button class="nav-tab nav-user" data-view="user">用户中心</button>
+    </nav>
+  </header>
+
+  <main id="keywordApp">
+    <section class="panel hero">
+      <div class="title-row">
+        <div class="title-icon">◆</div>
+        <h1>热搜词选品</h1>
+        <select id="siteSelect"></select>
+        <select id="weekSelect"></select>
+        <div id="dataUpdateTime" class="data-update-time"></div>
+      </div>
+      <p>默认展示德国站最新周、第一类目数据。可按类目、搜索词、排名区间筛选，并查看关键词自然年周趋势。</p>
+    </section>
+
+    <section class="panel filters">
+      <div class="filter-grid">
+        <label>
+          <span>类目</span>
+          <select id="categorySelect"></select>
+        </label>
+        <label>
+          <span>关键词排名</span>
+          <select id="rankSelect"></select>
+        </label>
+        <label>
+          <span>关键词变化</span>
+          <select id="relevanceSelect"></select>
+        </label>
+        <label>
+          <span>点击份额</span>
+          <div id="clickSelect" class="multi-select" data-placeholder="全部点击份额"></div>
+        </label>
+        <label>
+          <span>转化份额</span>
+          <div id="conversionSelect" class="multi-select" data-placeholder="全部转化份额"></div>
+        </label>
+        <label>
+          <span>周搜索量</span>
+          <select id="volumeSelect">
+            <option value="all">全部搜索量</option>
+            <option value="high">高搜索量</option>
+            <option value="low">低搜索量</option>
+          </select>
+        </label>
+      </div>
+      <div class="filter-actions">
+        <button id="applyBtn">筛选</button>
+        <button id="resetBtn" class="ghost">重置</button>
+      </div>
+    </section>
+
+    <section class="panel search-panel">
+      <label class="keyword-search">
+        <span>搜索</span>
+        <div class="keyword-search-box">
+          <input id="keywordInput" type="search" placeholder="请输入关键词" autocomplete="off" />
+          <button id="keywordSearchBtn" class="keyword-search-btn" type="button">搜索</button>
+          <div id="keywordSuggestions" class="keyword-suggestions" hidden></div>
+        </div>
+      </label>
+      <div class="keyword-profile-tabs" aria-label="关键词类型">
+        <button type="button" class="keyword-profile-tab active" data-profile="all">全部关键词</button>
+        <button type="button" class="keyword-profile-tab seasonal" data-profile="seasonal">季节性关键词</button>
+        <button type="button" class="keyword-profile-tab stable" data-profile="stable">稳定关键词</button>
+        <button type="button" class="keyword-profile-tab extreme" data-profile="extreme">极致关键词</button>
+      </div>
+    </section>
+
+    <section class="panel chart-panel">
+      <div class="section-head">
+        <h2>关键词搜索趋势</h2>
+        <div id="chartHint">选择表格中的关键词查看周趋势</div>
+      </div>
+      <div id="trendChart"></div>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="toolbar">
+        <button class="ghost">添加收藏到 ▼</button>
+        <button class="ghost">批量复制</button>
+        <button id="downloadSelectedBtn" class="ghost download-selected" hidden>下载选中</button>
+        <div class="summary" id="summaryText">正在加载...</div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th><input id="selectPageCheckbox" class="row-check" type="checkbox" /></th>
+              <th>序号</th>
+              <th>关键词</th>
+              <th class="trend-col">趋势</th>
+              <th>关键词排名</th>
+              <th>周搜索量</th>
+              <th>Top3点击份额</th>
+              <th>Top3转化份额</th>
+              <th>所属类目</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div class="pagination-bar">
+        <div class="page-info" id="pageInfo">第 1 / 1 页</div>
+        <div class="page-controls">
+          <button id="prevPageBtn" class="ghost">上一页</button>
+          <label class="page-field">
+            <span>页码</span>
+            <select id="pageSelect"></select>
+          </label>
+          <button id="nextPageBtn" class="ghost">下一页</button>
+          <label class="page-field">
+            <span>每页</span>
+            <select id="pageSizeSelect">
+              <option value="25">25</option>
+              <option value="50">50</option>
+              <option value="75">75</option>
+              <option value="100">100</option>
+            </select>
+          </label>
+          <label class="page-field manual-size">
+            <span>自定义页</span>
+            <input id="pageSizeInput" type="number" min="1" max="100" value="25" />
+          </label>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <main id="userCenter" class="user-center" hidden>
+    <section class="panel user-panel">
+      <div class="user-head">
+        <h1>用户中心</h1>
+        <p>账号、偏好、收藏、下载记录和团队权限将在这里逐步扩展。</p>
+      </div>
+      <div class="user-grid">
+        <div class="user-card">
+          <h2>账号信息</h2>
+          <p>预留登录用户、站点权限、订阅状态。</p>
+        </div>
+        <div class="user-card">
+          <h2>我的收藏</h2>
+          <p>预留关键词收藏夹、分组和备注。</p>
+        </div>
+        <div class="user-card">
+          <h2>下载记录</h2>
+          <p>预留 CSV 导出历史和批量任务。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/main.js?v=20260614-36"></script>
+</body>
+</html>
