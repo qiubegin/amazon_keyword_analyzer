@@ -3,6 +3,7 @@
 """Keyword product selection demo backend."""
 
 import csv
+import os
 import re
 from collections import Counter
 from datetime import date, datetime, timedelta
@@ -676,4 +677,8 @@ def trend():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5002, debug=False)
+    app.run(
+        host=os.getenv("APP_HOST", "127.0.0.1"),
+        port=int(os.getenv("APP_PORT", "5002")),
+        debug=False,
+    )

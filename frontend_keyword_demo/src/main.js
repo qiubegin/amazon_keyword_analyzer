@@ -1,4 +1,5 @@
-const API_BASE = 'http://127.0.0.1:5002';
+// Empty means same-origin requests. Nginx proxies /api/ to the backend.
+const API_BASE = '';
 
 const els = {
   site: document.querySelector('#siteSelect'),

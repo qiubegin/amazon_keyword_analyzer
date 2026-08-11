@@ -1,0 +1,10 @@
+.git/
+.idea/
+.jbeval/
+__pycache__/
+*.pyc
+raw_data/
+processed_data/**/*.csv
+*.log
+.venv/
+venv/
