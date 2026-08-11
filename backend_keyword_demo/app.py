@@ -41,6 +41,11 @@ COL_CONVERSION_SHARE = "前三ASIN转化份额占比"
 app = Flask(__name__)
 
 
+@app.get("/api/health")
+def health():
+    return jsonify({"status": "ok", "service": "amazon-keyword-analyzer"})
+
+
 @app.after_request
 def add_cors_headers(response):
     response.headers["Access-Control-Allow-Origin"] = "*"
