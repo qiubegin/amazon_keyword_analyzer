@@ -680,3 +680,70 @@ td { vertical-align: middle; color: #0f172a; font-size: 16px; }
   .filter-grid { grid-template-columns: 1fr 1fr; }
   .title-row { flex-wrap: wrap; }
 }
+
+@media (max-width: 640px) {
+  body { font-size: 14px; }
+  .topbar {
+    height: auto;
+    min-height: 0;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 16px;
+  }
+  .brand { min-width: 0; gap: 9px; }
+  .brand-mark { width: 34px; height: 34px; border-width: 4px; font-size: 20px; }
+  .brand-copy { gap: 3px; min-width: 0; }
+  .brand-main { font-size: 24px; }
+  .brand-tail { font-size: 20px; }
+  .brand-subtitle { font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .nav { width: 100%; height: auto; gap: 7px; }
+  .nav button { height: 36px; flex: 1 1 calc(50% - 7px); padding: 0 8px; font-size: 13px; }
+  main { padding: 10px 0 24px; }
+  .hero { margin: 0 8px; padding: 16px; }
+  .title-row { gap: 9px; }
+  .title-row h1 { width: calc(100% - 34px); margin: 0; font-size: 23px; }
+  .title-icon { font-size: 23px; }
+  #siteSelect, #weekSelect { flex: 1 1 calc(50% - 5px); min-width: 0; }
+  .data-update-time { width: 100%; margin-left: 0; font-size: 13px; white-space: normal; }
+  .hero p { margin-top: 12px; font-size: 14px; }
+  .filters { margin-bottom: 14px; padding: 16px 16px 64px; }
+  .filter-grid { grid-template-columns: 1fr; gap: 12px; }
+  .filter-actions { right: 16px; bottom: 14px; }
+  .filter-actions button { min-width: 82px; height: 36px; }
+  .search-panel { margin: -2px 0 14px; padding: 16px; align-items: stretch; flex-direction: column; gap: 14px; }
+  .keyword-search { width: 100%; max-width: none; flex-basis: auto; }
+  .keyword-search input { min-width: 0; font-size: 15px; }
+  .keyword-search-btn { width: 72px; font-size: 14px; }
+  .keyword-profile-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .keyword-profile-tab { width: 100%; min-width: 0; height: 40px; padding: 0 8px; font-size: 13px; }
+  .keyword-suggestion-item { grid-template-columns: 52px minmax(0, 1fr) 56px; gap: 7px; padding: 8px 6px; }
+  .suggestion-rank, .suggestion-main strong { font-size: 14px; }
+  .chart-panel { margin-bottom: 14px; padding: 14px 16px; }
+  .section-head { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .section-head h2, #chartHint { font-size: 17px; }
+  #trendChart { height: 220px; }
+  .toolbar { height: auto; min-height: 0; flex-wrap: wrap; gap: 8px; padding: 14px 16px; }
+  .toolbar button { flex: 1 1 auto; height: 36px; padding: 0 12px; font-size: 13px; }
+  .summary { width: 100%; margin-left: 0; line-height: 1.5; font-size: 13px; }
+  .table-wrap { width: 100%; max-width: 100%; overscroll-behavior-inline: contain; -webkit-overflow-scrolling: touch; }
+  table { min-width: 920px; }
+  th, td { padding: 0 12px; }
+  thead th, td { font-size: 13px; }
+  tbody tr { height: 96px; }
+  .kw strong { font-size: 14px; margin-bottom: 4px; }
+  .kw span, .cat span { font-size: 12px; max-width: 180px; }
+  .pagination-bar { align-items: stretch; flex-direction: column; gap: 10px; padding: 14px 16px; }
+  .page-info { font-size: 13px; text-align: center; }
+  .page-controls { justify-content: center; flex-wrap: wrap; gap: 8px; }
+  .page-field { gap: 4px; }
+  .page-field span { font-size: 12px; }
+  .page-field select { min-width: 82px; }
+  .manual-size input { width: 62px; }
+  .user-center { padding: 10px 8px 24px; }
+  .user-panel { padding: 20px 16px; }
+  .user-head h1 { font-size: 24px; }
+  .user-head p { font-size: 14px; }
+  .user-grid { grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+  .spark-popover { left: 12px !important; right: 12px; width: auto; min-width: 0; max-width: none; }
+  .spark-pop-chart, .spark-pop-chart .spark { height: 210px; }
+}
